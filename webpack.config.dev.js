@@ -12,8 +12,8 @@ module.exports.module.rules = ([{
       'postcss-loader'
     ]
 }]).concat(module.exports.module.rules || []);
-const newEntries = (module.exports.entry || {})['test-css'] = Path.resolve(rootDir, './assets/main.css');
-module.exports.entry = newEntries;
+module.exports.entry = (module.exports.entry || {});
+module.exports.entry['test-css'] = Path.resolve(rootDir, './assets/main.css');
 
 module.exports.devServer = {
     contentBase: [
